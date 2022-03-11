@@ -1,0 +1,14 @@
+import numpy as np
+
+m_list = [[1, 1, 1, 0, 0], [1, -1, 2, 0, 0], [2, 0, 0, -1, -1], [0, 4, 0, -1, 1], [0, 0, 6, -1, -2]]
+A = np.array(m_list)
+inv_A = np.linalg.inv(A)
+B = np.array([1, 2, 0, 0, 0])
+X = np.linalg.inv(A).dot(B)
+
+print("linear system  equation matrix is =  ")
+print(A)
+print(B)
+print(inv_A)
+print("system  solution is [ x,y,z,y1,y2 ] =  ")
+print(X)
